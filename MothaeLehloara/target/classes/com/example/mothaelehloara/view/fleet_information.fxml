@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mothaelehloara.controller.FleetInformationController">
+    <children>
+        <ScrollPane prefHeight="500.0" prefWidth="800.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="778.0">
+                    <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Aircraft Number:" />
+                        <TextField fx:id="noAircraftField" layoutX="120.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" />
+                        <Label layoutX="14.0" layoutY="48.0" text="Club Pre Capacity:" />
+                        <TextField fx:id="clubPreCapacityField" layoutX="120.0" layoutY="44.0" prefHeight="25.0" prefWidth="200.0" />
+                        <Label layoutX="14.0" layoutY="82.0" text="Eco Capacity:" />
+                        <TextField fx:id="ecoCapacityField" layoutX="120.0" layoutY="78.0" prefHeight="25.0" prefWidth="200.0" />
+                        <Label layoutX="14.0" layoutY="116.0" text="Engine Type:" />
+                        <TextField fx:id="engineTypeField" layoutX="120.0" layoutY="112.0" prefHeight="25.0" prefWidth="200.0" />
+                        <Label layoutX="14.0" layoutY="150.0" text="Cruise Speed:" />
+                        <TextField fx:id="cruiseSpeedField" layoutX="120.0" layoutY="146.0" prefHeight="25.0" prefWidth="200.0" />
+                        <Label layoutX="14.0" layoutY="184.0" text="Air Length:" />
+                        <TextField fx:id="airLengthField" layoutX="120.0" layoutY="180.0" prefHeight="25.0" prefWidth="200.0" />
+                        <Label layoutX="14.0" layoutY="218.0" text="Wing Span:" />
+                        <TextField fx:id="wingSpanField" layoutX="120.0" layoutY="214.0" prefHeight="25.0" prefWidth="200.0" />
+                        <!-- Example Table View for displaying fleet -->
+                        <TableView fx:id="fleetTableView" layoutX="350.0" layoutY="10.0" prefHeight="200.0" prefWidth="400.0">
+                            <columns>
+                                <TableColumn fx:id="colFleetNo" prefWidth="100.0" text="Aircraft No." />
+                                <TableColumn fx:id="colFleetEcoCap" prefWidth="100.0" text="Eco Cap." />
+                                <TableColumn fx:id="colFleetEngType" prefWidth="100.0" text="Engine Type" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+            <children>
+                <Button fx:id="btnAddFleet" mnemonicParsing="false" text="Add" />
+                <Button fx:id="btnUpdateFleet" mnemonicParsing="false" text="Update" />
+                <Button fx:id="btnDeleteFleet" mnemonicParsing="false" text="Delete" />
+                <Button fx:id="btnSaveFleet" mnemonicParsing="false" text="Save" />
+            </children>
+        </HBox>
+    </children>
+</VBox>
